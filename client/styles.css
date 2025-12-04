@@ -93,3 +93,49 @@ footer {
   color: #FFD700;
   opacity: 0.7;
 }
+
+/* Buttons container */
+#button-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* Team cards */
+.team-card {
+  border: 2px solid #FFD700;
+  border-radius: 12px;
+  background: rgba(255, 215, 0, 0.05);
+  padding: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.2);
+}
+
+/* Summary header (keep centered) */
+.team-card summary {
+  font-weight: bold;
+  font-size: 1.1rem;
+  cursor: pointer;
+  list-style: none;
+  outline: none;
+  text-align: center; /* summary stays centered */
+}
+
+/* Custom arrows */
+.team-card summary::before {
+  content: "▶ ";
+  display: inline-block;
+  margin-right: 5px;
+  transition: transform 0.2s;
+}
+
+.team-card[open] summary::before {
+  content: "▼ ";
+}
+
+/* Dropdown content inside details */
+.team-card > div {
+  text-align: left; /* left-align content */
+  margin-top: 10px;
+}
